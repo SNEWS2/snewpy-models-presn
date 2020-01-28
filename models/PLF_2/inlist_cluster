@@ -1,0 +1,8 @@
+&star_job
+extras_rpar(4) = 0.1
+new_net_name = "mesa_204.net"
+/ ! end of star_job namelist
+&controls
+Dutch_wind_eta = 0.0
+initial_mass = 15.0
+/ ! end of control_job namelist

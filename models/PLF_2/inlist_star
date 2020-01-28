@@ -1,0 +1,60 @@
+&star_job
+
+! set initial model information
+
+      
+      create_pre_main_sequence_model = .true.  
+
+      kappa_file_prefix = 'gs98'
+
+      change_lnPgas_flag = .false.
+      new_lnPgas_flag = .false.
+
+      change_initial_v_flag = .true.
+      change_v_flag = .false.
+      new_v_flag = .true.
+      center_ye_limit_for_v_flag = 0.47
+
+
+      change_net = .true.   
+      !Set in inlist_cluster
+     ! new_net_name = 'mesa_127.net'
+
+
+      pre_ms_relax_num_steps = 200  
+
+       save_model_when_terminate = .true.
+       save_model_filename = 'final_model.mod'
+
+      pgstar_flag = .false.
+
+
+      extras_lipar = 2
+      extras_lrpar = 4
+
+      !When to change convergence values
+      extras_ipar(1) = 4
+
+      !0 Never
+      !1 He_core_mass>0
+      !2 c_core_mass>0
+      !3 o_core_mass >0
+      !4 si_core_mass>0
+      !5 fe_core_mass>0
+
+      !Set new convergence values
+      !extras_rpar(1) dX_nuc_drop_limit = 5d-2
+      !extras_rpar(2) dX_nuc_drop_limit_at_high_T = 5d-3
+      !extras_rpar(3) dX_nuc_drop_min_X_limit = 5d-2
+      extras_rpar(1) = 5d-2
+      extras_rpar(2) = 5d-3
+      extras_rpar(3) = 5d-2
+
+      !When to turn off thermohaline (same flags as convergence)
+      extras_ipar(2) = 4
+
+
+/ ! end of star_job namelist
+
+
+

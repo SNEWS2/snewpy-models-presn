@@ -1,0 +1,44 @@
+Files contain data related to emission of the pair
+annihilation electron anti-neutrinos from pre
+-supernova star. </br></br>
+
+s15_nuebar_data.txt : 15 M_sun star </br>
+s25_nuebar_data.txt : 25 M_sun star </br>
+
+<b> Description of data: </b> </br>
+Column 1 - original stellar evolution code timestep number </br>
+Column 2 - time remaining to start of the core-collapse in seconds </br>
+Column 3 - total energy ( Q ) emitted in the form of electron anti-neutrinos [erg/s] </br>
+Column 4 - number (R) of electron anti-neutrinos emitted from pre-supernova [1/s] </br>
+Column 5 - average energy ( Eavg ) of electron anti-neutrinos [MeV] </br>
+Column 6 - dispersion ( Sigma ) of the electron anti-neutrino spectrum [MeV] </br>
+Column 7 - first parametr ( a ) of the analytical approximation for the spectrum <br>
+Column 8 - second parametr ( alpha ) of the analytical approximation for the spectrum <br>
+Column 9 - third parametr ( b ) of the analytical approximation for the spectrum </br>
+<br>
+<br>
+Parameters from Cols 7-9 form analytical approximation of the electron anti-neutrino
+spectrum emitted by a pre-supernova star with formula:
+<br><br>
+(1)   dN(t)/dEnu = a*Enu^alpha*exp(-b*Enu) [1/s/MeV] <br>
+<br>
+Average energy and dispersion for this formula is equal to values provided
+by Cols 5 and 6, respectively. Values in Cols 3-6 are exact and may be used
+to construct other analytical approximations for the spectrum. Formula (1) however,
+works very well under typical pre-supernova  conditions. 
+<br>
+In the terms of the spectrum moments (R, Q, J - 1st, 2nd and 3rd moment, respectively) 
+parameters above are equal to:
+<br>
+(2)   Eavg=Q/R
+<br>
+(3)   Sigma = sqrt(R*J-Q*Q)/R
+<br>
+(4)   alpha = Q*Q/(R*J-Q*Q)-1
+<br>
+(5)   b =  R*Q/(R*J-Q*Q)
+<br>                                  
+(6)   a = R*b^(1+alpha)/Gamma(1+alpha)            
+<br><br>
+Note, that replacing a with a/R gives spectrum
+normalized to 1.

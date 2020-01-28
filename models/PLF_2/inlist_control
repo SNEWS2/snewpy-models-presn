@@ -1,0 +1,196 @@
+\&controls
+      initial_z = 0.020 
+      Zbase = 0.02d0
+
+! output
+      photostep = 100
+      profile_interval =  100
+      history_interval = 1
+      terminal_interval = 1
+      write_header_frequency = 100
+      max_model_number = 400000
+!      max_model_number = 63401
+max_num_profile_models = -1
+! opacities
+
+      use_Type2_opacities = .true.
+      Zbase = 0.02
+
+! winds
+      RGB_wind_scheme = 'Dutch'
+      AGB_wind_scheme = 'Dutch'
+      RGB_to_AGB_wind_switch = 1d-4
+      !Set in inlist_cluster
+      !Dutch_wind_eta = 0.8
+
+
+
+! resolution
+
+      mesh_delta_coeff = 1.0
+      !Set in inlist_cluster
+      !max_dq = 0.01d0
+      max_allowed_nz = 50000
+
+!	max_timestep_factor=1.15d0
+! timestep 
+
+! use this through about the onset of core si burn
+       dX_nuc_drop_limit = 1d-3   
+       dX_nuc_drop_limit_at_high_T = 1d-4  
+       dX_nuc_drop_min_X_limit = 1d-3  
+       dX_nuc_drop_max_A_limit = 52   
+
+
+! use this beyond core si burn
+!       dX_nuc_drop_limit = 5d-2   
+!       dX_nuc_drop_limit_at_high_T = 5d-3  
+!       dX_nuc_drop_min_X_limit = 5d-2  
+!       dX_nuc_drop_max_A_limit = 52   
+
+
+
+      varcontrol_target = 1d-4  ! 1e-2
+      min_timestep_limit = 1d-12 ! (seconds)
+
+! burning
+      sig_min_factor_for_high_Tcenter = 1
+
+
+! soften convective boundaries
+!      limit_mixing_length_by_dist_to_bdy = 1
+!      conv_bdy_mix_softening_f  = 0.001
+!      conv_bdy_mix_softening_f0 = 0.003
+!      conv_bdy_mix_softening_min_D_mix = 1d-3
+
+
+! mlt
+         mixing_length_alpha = 1.5
+         MLT_option = 'Henyey'
+
+
+! mlt++
+         okay_to_reduce_gradT_excess = .true. 
+            gradT_excess_f1 = 1d-4
+            gradT_excess_f2 = 1d-2
+            gradT_excess_age_fraction = 0.9d0
+
+            gradT_excess_lambda1 = 1.0
+            gradT_excess_beta1 = 0.35
+            
+            gradT_excess_lambda2 = 0.5
+            gradT_excess_beta2 = 0.25
+            
+            gradT_excess_dlambda = 0.1
+            gradT_excess_dbeta = 0.1
+
+
+! eps grav
+
+include_dmu_dt_in_eps_grav = .true.
+
+
+! overshoot
+! nonburning regions
+         overshoot_f_above_nonburn_core = 0.004
+         overshoot_f0_above_nonburn_core = 0.001
+         overshoot_f_above_nonburn_shell = 0.004
+         overshoot_f0_above_nonburn_shell = 0.001
+         overshoot_f_below_nonburn_shell = 0.004
+         overshoot_f0_below_nonburn_shell = 0.001
+
+! h burning regions
+         overshoot_f_above_burn_h_core = 0.004
+         overshoot_f0_above_burn_h_core = 0.001
+         overshoot_f_above_burn_h_shell = 0.004
+         overshoot_f0_above_burn_h_shell = 0.001
+         overshoot_f_below_burn_h_shell = 0.004
+         overshoot_f0_below_burn_h_shell = 0.001
+
+! he burning regions
+         overshoot_f_above_burn_he_core = 0.004
+         overshoot_f0_above_burn_he_core = 0.001
+         overshoot_f_above_burn_he_shell = 0.004
+         overshoot_f0_above_burn_he_shell = 0.001
+         overshoot_f_below_burn_he_shell = 0.004
+         overshoot_f0_below_burn_he_shell = 0.001
+
+! metal burning regions
+         overshoot_f_above_burn_z_core = 0.004
+         overshoot_f0_above_burn_z_core = 0.001
+         overshoot_f_above_burn_z_shell = 0.004
+         overshoot_f0_above_burn_z_shell = 0.001
+         overshoot_f_below_burn_z_shell = 0.004
+         overshoot_f0_below_burn_z_shell = 0.001
+
+         D_mix_ov_limit = 1d2
+
+
+! semiconvection
+         use_Ledoux_criterion = .true.
+         alpha_semiconvection = 0.01
+
+
+! thermohaline
+      thermohaline_coeff = 2.0 
+      thermohaline_option = 'Kippenhahn'
+
+
+! angular momentum transport
+      am_nu_visc_factor = 1  
+      am_D_mix_factor = 0.0333333333333
+      D_DSI_factor = 0.0d0
+      D_SH_factor  = 0.0d0
+      D_SSI_factor = 0.0d0
+      D_ES_factor  = 0.0d0
+      D_GSF_factor = 0.0d0
+      D_ST_factor  = 0.0d0
+
+
+! temporal resolution
+
+      varcontrol_target = 5d-5
+      min_timestep_limit = 1d-12 ! (seconds)
+      max_timestep_factor = 1.20d0
+
+     ! resolve the depletion of each fuel
+     delta_lg_XH_cntr_limit = 0.01d0
+     delta_lg_XH_cntr_max   = 0.0d0
+     delta_lg_XH_cntr_min   = -6.0d0
+     delta_lg_XH_cntr_hard_limit = 0.02d0
+
+     delta_lg_XHe_cntr_limit = 0.01d0
+     delta_lg_XHe_cntr_max   = 0.0d0
+     delta_lg_XHe_cntr_min   = -6.0d0
+     delta_lg_XHe_cntr_hard_limit = 0.02d0
+
+     delta_lg_XC_cntr_limit = 0.01d0
+     delta_lg_XC_cntr_max   = 0.0d0
+     delta_lg_XC_cntr_min   = -6.0d0
+     delta_lg_XC_cntr_hard_limit = 0.02d0
+
+     delta_lg_XNe_cntr_limit = 0.01d0
+     delta_lg_XNe_cntr_max   = 0.0d0
+     delta_lg_XNe_cntr_min   = -6.0d0
+     delta_lg_XNe_cntr_hard_limit = 0.02d0
+
+     delta_lg_XO_cntr_limit = 0.01d0
+     delta_lg_XO_cntr_max   = 0.0d0
+     delta_lg_XO_cntr_min   = -6.0d0
+     delta_lg_XO_cntr_hard_limit = 0.02d0
+
+     delta_lg_XSi_cntr_limit = 0.01d0
+     delta_lg_XSi_cntr_max   = 0.0d0
+     delta_lg_XSi_cntr_min   = -6.0d0
+     delta_lg_XSi_cntr_hard_limit = 0.02d0
+
+     ! this is mainly to resolve properly when the star goes off the main sequence
+     delta_HR_limit = 0.0025d0
+     delta_lgL_He_limit =0.1
+
+     ! limit changes iin the mass due to winds
+     delta_lg_star_mass_limit = 4e-5
+
+
+
+/ ! end of controls namelist

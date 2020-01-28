@@ -1,0 +1,6 @@
+0832227993077514d23560f3833115e6  15NuSeparateIsotopes.zip
+18125663e45fa7715839356ec09cecab  30NuSeparateIsotopes.zip
+ae164336a3ab99e47043dbac261c6d06  readData.py
+e0c6a7799e8c93eb91124fc0df5ff2ab  README.txt
+2382b9b6479aebb7e2820492791ad4b6  totalLuminosity_15SolarMass.dat
+08496961d61ef093dfa1a9db62fa5d62  totalLuminosity_30SolarMass.dat
