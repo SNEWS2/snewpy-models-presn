@@ -2,11 +2,7 @@
 Collection af available models of pre-supernova neutrino fluxes
 
 ## Models list
-*Available models*
 
-* *Patton, Kelly M, Lunardini, Cecilia, Farmer, Robert J., & Timmes, F. X.* (2019). Neutrinos from Beta Processes in a Presupernova: Probing the Isotopic Evolution of a Massive Star [Data set]. Zenodo. http://doi.org/10.5281/zenodo.2626645
-* *Patton, Kelly M., Lunardini, Cecilia, & Farmer, Robert J.* (2019). Presupernova neutrinos: realistic emissivities from stellar evolution (Version 7624) [Data set]. Astrophysical Journal, 840:2 (14pp), 2017. Zenodo. http://doi.org/10.5281/zenodo.2598709
-* *A. Odrzywolek* http://th.if.uj.edu.pl/~odrzywolek/psns/index.html
-* *C. Kato* https://www.dropbox.com/sh/eatmhfk4p6z9ygm/AADBkMrMLrs10GTa8DBYx9Qsa?dl=0
-## References
-*Papers, describing the models*
+* `Patton_2017` [Zenodo dataset]( http://doi.org/10.5281/zenodo.2626645), reference: [Kelly M. Patton et al 2017 ApJ 851 6](https://iopscience.iop.org/article/10.3847/1538-4357/aa95c4)
+* `Odrzywolek_2010` [Dataset from website](http://th.if.uj.edu.pl/~odrzywolek/psns/index.html), reference:[A.Odrzywolek, Alexander Heger, Acta Phys.Polon.B 41 (2010)](https://inspirehep.net/authors/1017039)
+* `Kato_2017`: [Zenodo dataset](https://zenodo.org/records/3768052), reference: [Chinami Kato et al 2017 ApJ 848 48](https://iopscience.iop.org/article/10.3847/1538-4357/aa8b72)
