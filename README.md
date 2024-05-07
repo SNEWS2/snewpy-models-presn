@@ -1,5 +1,10 @@
 # presn-models
-Collection af available models of pre-supernova neutrino fluxes
+Collection af available models of pre-supernova neutrino fluxes.
+
+## Usage: 
+These models are intended be read by the [SNEWPY](https://github.com/SNEWS2/snewpy) package.
+
+See the example [notebooks](https://github.com/SNEWS2/snewpy/tree/main/doc/nb/presn) and the model classes description in [SNEWPY documentation](https://snewpy.readthedocs.io/en/latest/models.html#module-snewpy.models.presn).
 
 ## Models list
 
