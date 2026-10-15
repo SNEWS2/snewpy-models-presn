@@ -25,8 +25,7 @@ Each pair annihilation file has columns:
 # 1 - energy (MeV)
 # 2 - electron neutrino number luminosity (1/MeV/s)
 # 3 - electron antineutrino number luminosity (1/MeV/s)
-# 4 - mu/tau neutrino number luminosity (1/MeV/s)
-# 5 - mu/tau antineutrino number luminosity (1/MeV/s)
+# 4 - mu/tau neutrino number luminosity (1/MeV/s), nu_mu + nu_tau combined
+# 5 - mu/tau antineutrino number luminosity (1/MeV/s), nu_mu-bar + nu_tau-bar combined
 
-
-
+Columns 4 and 5 are the sum over the two heavy-lepton flavors, not the spectrum of each. For a single flavor, divide by 2.
