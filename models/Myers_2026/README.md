@@ -2,9 +2,11 @@ Included here are the neutrino luminosities for the stellar models included in M
 
 The directories are named as "{ZAMS mass}_{eta}_{bounds}".  The values covered are:
 
+```
 ZAMS Mass = {12, 15, 18, 20}
 eta = {0.2, 0.4, 0.8, 1.0}
 bounds = {all, core}
+```
 
 Within each directory are subdirectories names "betaLuminosity" and "pairLuminosity", which include the volume integrated spectra as a function of energy for the beta processes and pair annihilation, respectively.
 
@@ -14,16 +16,22 @@ Every file includes a header which describes each column and also gives the corr
 
 Each beta file has columns:
 
+```
 # 1 - energy (MeV)
 # 2 - electron neutrino number luminosity (1/MeV/s)
 # 3 - electron antineutrino number luminosity (1/MeV/s)
 # 4 - electron neutrino energy luminosity (1/s)
 # 5 - electron antineutrino energy luminosity (1/s)
+```
 
 Each pair annihilation file has columns:
 
+```
 # 1 - energy (MeV)
 # 2 - electron neutrino number luminosity (1/MeV/s)
 # 3 - electron antineutrino number luminosity (1/MeV/s)
-# 4 - mu/tau neutrino number luminosity (1/MeV/s)
-# 5 - mu/tau antineutrino number luminosity (1/MeV/s)
+# 4 - mu/tau neutrino number luminosity (1/MeV/s), nu_mu + nu_tau combined
+# 5 - mu/tau antineutrino number luminosity (1/MeV/s), nu_mu-bar + nu_tau-bar combined
+```
+
+Columns 4 and 5 are the sum over the two heavy-lepton flavors, not the spectrum of each. For a single flavor, divide by 2.
